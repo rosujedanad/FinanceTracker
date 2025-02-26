@@ -1,6 +1,7 @@
 import pandas as pd
 import csv
 from datetime import datetime
+from dataEntry import get_date,get_amount,get_category,get_description
 
 class CSV:
     CSV_FILE="finance_data.csv"
@@ -26,5 +27,7 @@ class CSV:
             writer=csv.DictWriter(csvfile,fieldnames=cls.COLUMNS)
             writer.writerow(new_entry)
         print("entry added")
+
+
 CSV.initializeCSV()
 CSV.add_entry("20-07-2024",125.65,"income","salary")
