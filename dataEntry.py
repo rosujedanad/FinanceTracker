@@ -33,4 +33,4 @@ def get_category():
     return get_category()
 
 def get_description(prompt):
-    return input("ener the description:")
+    return input("enter the description:")
